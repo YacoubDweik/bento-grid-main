@@ -1,0 +1,320 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("./assets/fonts/DMSans-VariableFont.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Purple-100: hsl(254, 88%, 90%);
+  --Purple-500: hsl(256, 67%, 59%);
+  --Yellow-100: hsl(31, 66%, 93%);
+  --Yellow-500: hsl(39, 100%, 71%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 7%);
+  --font-size: 18px;
+  --font-weight: 500;
+}
+
+body {
+  font-family: "DM Sans";
+  background-color: #eee;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+}
+
+.container {
+  max-width: 300px;
+  margin: 25px auto;
+}
+
+.container__card {
+  padding: 15px;
+  margin: 25px 0;
+  border-radius: 10px;
+  line-height: 1;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Social Card */
+
+.social {
+  background-color: var(--Purple-500);
+  color: var(--White);
+  text-align: center;
+  padding: 30px 25px;
+}
+
+.social__title {
+  max-width: 80%;
+  margin: 0 auto;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.gold {
+  color: var(--Yellow-500);
+}
+
+.social i {
+  padding-right: 5px;
+}
+
+.social__img {
+  max-width: 40%;
+  margin: 10px auto 5px;
+}
+
+.social__text {
+  color: var(--Yellow-100);
+  font-size: 14px;
+}
+
+/* Manage Card */
+
+.manage {
+  text-align: left;
+  background-color: var(--White);
+  font-weight: 500;
+}
+
+.manage__title {
+  display: block;
+  max-width: 95%;
+}
+
+/* Maintain Card */
+
+.maintain {
+  text-align: left;
+  overflow: hidden;
+  background-color: var(--Yellow-500);
+}
+
+.maintain__title {
+  display: block;
+  color: var(--Black);
+  max-width: 75%;
+  margin: 0 0 15px;
+}
+
+.maintain__img {
+  width: 75%;
+  margin-bottom: -20%;
+}
+
+.maintain__img img {
+  height: 100%;
+}
+
+/* Schedule Card */
+
+.schedule {
+  background-color: var(--Purple-100);
+  text-align: center;
+}
+
+.schedule__img {
+  margin: 15px 0;
+}
+
+.schedule__text {
+  display: block;
+  font-size: 16px;
+  width: 95%;
+  margin: 0 auto;
+  line-height: 1.2;
+}
+
+/* Grow Card */
+
+.grow {
+  background-color: var(--Purple-500);
+  color: var(--White);
+  text-align: center;
+}
+
+.grow > * {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  font-size: var(--font-size);
+}
+
+.grow__img {
+  margin-bottom: 15px;
+}
+
+/* Percentage Card */
+
+.percentage {
+  background-color: var(--White);
+}
+
+.percentage > * {
+  width: 70%;
+}
+
+.percentage__value {
+  display: block;
+  font-size: 50px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.percentage__title {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.percentage__img {
+  max-width: 50%;
+}
+
+/* Create Card */
+
+.create {
+  background-color: var(--Yellow-100);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.create__img {
+  margin-top: 15px;
+  max-width: 50%;
+}
+
+.purple {
+  color: var(--Purple-500);
+}
+
+/* Write Card */
+
+.write {
+  background-color: var(--Yellow-500);
+  color: var(--Black);
+  font-size: 22px;
+  line-height: 0.9;
+}
+
+.write__title {
+  max-width: 85%;
+}
+
+.write__img {
+  max-width: 60%;
+  margin: 15px 0;
+}
+
+@media (min-width: 875px) {
+  .container {
+    max-width: min(1110px, 95%);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 255px));
+    gap: 25px;
+    margin: 85px auto;
+  }
+  .container__card {
+    margin: 0;
+    padding: 25px;
+  }
+  .create {
+    grid-area: 1/1/3/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: -2px;
+  }
+  .create__img {
+    max-width: 100%;
+  }
+  .social {
+    grid-area: 1/2/1/4;
+    min-height: 325px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .social__title {
+    font-size: 50px;
+  }
+  .social__text {
+    font-size: var(--font-size);
+  }
+  .schedule {
+    grid-area: 1/4/4/5;
+    overflow: hidden;
+    text-align: left;
+  }
+  .schedule__title {
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .schedule__img {
+    margin: 15px -85% 15px 0;
+  }
+  .schedule__text {
+    display: block;
+    font-size: var(--font-size);
+    width: 95%;
+    margin: 0 auto;
+    line-height: 1.2;
+  }
+  .write {
+    grid-area: 3/1/5/2;
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: -2px;
+  }
+  .write__img {
+    max-width: 100%;
+    margin: 50px 0 0;
+  }
+  .manage {
+    font-size: 30px;
+    letter-spacing: -2px;
+    grid-area: 2/2/4/3;
+  }
+  .maintain {
+    font-size: 30px;
+    letter-spacing: -2px;
+    grid-area: 2/3/4/4;
+  }
+  .percentage {
+    grid-area: 4/2/5/3;
+  }
+  .percentage > * {
+    width: 100%;
+  }
+  .percentage__title {
+    font-size: var(--font-size);
+  }
+  .percentage__img {
+    max-width: 100%;
+  }
+  .grow {
+    display: flex;
+    place-items: center;
+    grid-area: 4/3/5/5;
+    font-size: 34px;
+    text-align: left;
+  }
+  .grow__title {
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: -2px;
+    padding-left: 10px;
+  }
+}
